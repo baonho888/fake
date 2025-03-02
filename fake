@@ -17,6 +17,17 @@ drops:Button("get max level ", function()local player = game.Players.LocalPlayer
         end
     end
 end)
+
+local drops = serv:Channel("inf skill")
+while true do
+for i, v in pairs(game:GetDescendants()) do
+    if v:IsA("RemoteEvent") and v.Name == "Fire" then
+        v:FireServer("Realtriplekatana")
+    end
+end
+wait(0.1)
+end)
+
 drops:Toggle("hitbox all", false, function(t)
     aura = t
 dis = tonumber(v)
